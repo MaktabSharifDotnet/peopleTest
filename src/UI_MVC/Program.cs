@@ -7,11 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-// --- این خط AppDbContext را به برنامه معرفی می‌کند ---
-// برنامه می‌فهمد که AppDbContext وجود دارد و خودِ AppDbContext
-// از طریق متد OnConfiguring تنظیماتش را انجام می‌دهد.
+// --- این خط گمشده بود ---
+// این کد AppDbContext را به برنامه معرفی می‌کند
+// تا بتواند آن را به کنترلرها (مثل PeopleController) تزریق کند
 builder.Services.AddDbContext<AppDbContext>();
-// ----------------------------------------------------
+// ------------------------------------------
 
 var app = builder.Build();
 

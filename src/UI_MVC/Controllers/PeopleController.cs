@@ -12,5 +12,9 @@ namespace UI_MVC.Controllers
 
             return View(people);
         }
+        public IActionResult Add() 
+        {
+            return View();
+        }
     }
 }
