@@ -1,7 +1,17 @@
+﻿// این دو using برای کار با دیتابیس لازم هستند
+using Microsoft.EntityFrameworkCore;
+using UI_MVC.Models.DataBase;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+// --- این خط AppDbContext را به برنامه معرفی می‌کند ---
+// برنامه می‌فهمد که AppDbContext وجود دارد و خودِ AppDbContext
+// از طریق متد OnConfiguring تنظیماتش را انجام می‌دهد.
+builder.Services.AddDbContext<AppDbContext>();
+// ----------------------------------------------------
 
 var app = builder.Build();
 
