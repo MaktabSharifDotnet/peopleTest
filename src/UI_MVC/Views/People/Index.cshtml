@@ -1,0 +1,24 @@
+﻿@{
+}
+
+<h1>لیست پرسنلی</h1>
+
+<table class="table table-hover w-100 mt-5">
+    <tr>
+        <td>شناسه</td>
+        <td>نام</td>
+        <td>نام خانوادگی </td>
+        <td>موبایل </td>
+        <td>شهر </td>
+    </tr>
+    @foreach (var person in @Model)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.FirstName</td>
+            <td>@person.LastName</td>
+            <td>@person.Phone</td>
+            <td>@person.City</td>
+        </tr>
+    }
+</table>
