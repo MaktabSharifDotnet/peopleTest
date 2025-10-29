@@ -3,10 +3,10 @@
 
 
 
-<form class="row g-3" asp-controller="people" asp-action="Add" method="post">
+<form class="row g-3" asp-controller="people" asp-action="Edit" method="post">
     <div class="col-md-6">
         <label asp-for="FirstName" class="form-label">نام</label>
-        <input asp-for ="FirstName" type="text" class="form-control" ">
+        <input asp-for="FirstName" type="text" class="form-control" ">
     </div>
     <div class="col-md-6">
         <label asp-for="LastName" class="form-label">نام خانوادگی</label>
@@ -21,6 +21,6 @@
         <input asp-for="CityName" type="text" class="form-control">
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-success">ذخیره</button>
+        <button  type="submit" class="btn btn-success">ذخیره</button>
     </div>
 </form>

@@ -14,6 +14,7 @@
         <td>نام خانوادگی </td>
         <td>موبایل </td>
         <td>شهر </td>
+        <td></td>
     </tr>
     @foreach (var person in @Model)
     {
@@ -23,6 +24,14 @@
             <td>@person.LastName</td>
             <td>@person.CityName</td>
             <td>@person.PhoneNumber</td>
+            <td>
+                <a asp-controller="people" asp-action="Edit" asp-route-id="@person.Id" class="btn btn-warning">ویرایش</a>
+                
+                <form asp-controller="people" asp-action="Delete" asp-route-id = "@person.Id" method="post">
+                    <input type="submit" value="حذف" class="btn btn-danger" >
+                </form>
+            </td>
+
         </tr>
     }
 </table>
